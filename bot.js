@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am ready!');
+  console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setGame('"!help" For Commands');
 });
 
 client.on('message', message => {
